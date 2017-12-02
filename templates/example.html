@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Flask Google Maps Example</title>
+            {{"decoupled-map"|googlemap_js(37.4419, -122.1419, varname="decoupledmap", markers=[(37.4419, -122.1419)])}}
+            {{trdmap.js}}
+    </head>
+    <body>
+        <h1>Hospitals in vicinity</h1>
+
+
+
+
+        <!--<h2> 3rd map generated in view</h2>-->
+        <!--<h3> Example for multiple markers with infoboxes</h3>-->
+        <!--<h4>Click in markers to see it in action!</h4>-->
+        <!--<h4>Click in the YELLOW marker to see HTML rendered</h4>-->
+        {{trdmap.html}}
+
+        <code>
+            <pre>
+<!--
+                {% raw %}
+
+View:
+from flask_googlemaps import Map, icons
+
+@app.route("/")
+def mapview():
+    trdmap = Map(
+        identifier="trdmap",
+        lat=37.4419,
+        lng=-122.1419,
+        markers=[
+            {
+                'icon': icons.alpha.B,
+                'lat':  37.4419,
+                'lng':  -122.1419,
+                'infobox': "Hello I am < b style='color:green;'>B< / b >!"
+            },
+            {
+                'icon': icons.dots.blue,
+                'lat': 37.4300,
+                'lng': -122.1400,
+                'infobox': "Hello I am < b style='color:blue;'>BLUE< / b >!"
+            },
+            {
+                'icon': icons.dots.yellow,
+                'lat': 37.4500,
+                'lng': -122.1350,
+                'infobox': (
+                    "Hello I am < b style='color:#ffcc00;'> YELLOW < / b >!"
+                    "< h2 >It is HTML title< / h2 >"
+                    "< img src=' //placehold.it/50' >"
+                    "< br >Images allowed!"
+                )
+            }
+        ]
+    )
+    return render_template('example.html', trdmap=trdmap)
+
+Template:
+in head:
+    {{trdmap.js}}
+in body:
+    {{trdmap.html}}
+
+{% endraw %}
+-->
+
+    </body>
+</html>
