@@ -16,44 +16,44 @@ GoogleMaps(app, key="AIzaSyAZzeHhs-8JZ7i18MjFuM35dJHq70n3Hx4")
 
 @app.route("/")
 def mapview():
-
-    hospList= getHospitalcoords('Chennai')
-
-    markerList = []
-    for hosp in range(len(hospList)):
-        print (hospList[hosp]['location']['lat'],hospList[hosp]['location']['lng'])
-
-        lat=hospList[hosp]['location']['lat']
-        lon = hospList[hosp]['location']['lng']
-        marker = dict(
-            {
-                'icon':icons.alpha.B,
-                'lat':  lat,
-                'lng':  lon,
-                # 'infobox': "Hello I am < b style='color:green;'>B< / b >!"
-            }
-
-        )
-        markerList.append(marker)
-
-
-    lat, lng = getCityCoords(hospList)
-    trdmap = Map(
-        identifier="trdmap",
-        lat=lat,
-        lng=lng,
-
-        markers=markerList
-        # markers=[
-        #     {
-        #         'icon': icons.images.icon7,
-        #         'lat':  lat,
-        #         'lng':  lng,
-        #         'infobox': "Hello I am < b style='color:green;'>B< / b >!"
-        #     }
-        # ]
-    )
-    return render_template('example.html', trdmap=trdmap)
+    return "< h1 style = 'color:blue' > Howdy ! < / h1 >"
+    # hospList= getHospitalcoords('Chennai')
+    #
+    # markerList = []
+    # for hosp in range(len(hospList)):
+    #     print (hospList[hosp]['location']['lat'],hospList[hosp]['location']['lng'])
+    #
+    #     lat=hospList[hosp]['location']['lat']
+    #     lon = hospList[hosp]['location']['lng']
+    #     marker = dict(
+    #         {
+    #             'icon':icons.alpha.B,
+    #             'lat':  lat,
+    #             'lng':  lon,
+    #             # 'infobox': "Hello I am < b style='color:green;'>B< / b >!"
+    #         }
+    #
+    #     )
+    #     markerList.append(marker)
+    #
+    #
+    # lat, lng = getCityCoords(hospList)
+    # trdmap = Map(
+    #     identifier="trdmap",
+    #     lat=lat,
+    #     lng=lng,
+    #
+    #     markers=markerList
+    #     # markers=[
+    #     #     {
+    #     #         'icon': icons.images.icon7,
+    #     #         'lat':  lat,
+    #     #         'lng':  lng,
+    #     #         'infobox': "Hello I am < b style='color:green;'>B< / b >!"
+    #     #     }
+    #     # ]
+    # )
+    # return render_template('example.html', trdmap=trdmap)
     # return
 
 def getCityCoords(hospList):
@@ -83,4 +83,4 @@ def getHospitalcoords(city):
 
     return hospList
 if __name__ == "__main__":
-    app.run(debug=True, use_reloader=True)
+    app.run(host='0.0.0.0')
