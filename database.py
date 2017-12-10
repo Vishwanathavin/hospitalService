@@ -19,7 +19,7 @@ def database():
         hosp["ID"] = 'ID_'+ '%04d'%hosptialInfo.index(hosp)
 
         for col in ['services_','specializations']:
-            hosp[col]=hosp[col].split()
+            hosp[col]=hosp[col].split(',')
 
         hospName = hosp['hospital_private']
         print(hosp['ID'],hospName)
