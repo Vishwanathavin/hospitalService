@@ -15,11 +15,12 @@ def database():
 
     hosptialInfo = json.load(open('./data/APIData.json'))['records']
 
-    for hosp in hosptialInfo:
+    for hosp in hosptialInfo[:120]:
         hosp["ID"] = 'ID_'+ '%04d'%hosptialInfo.index(hosp)
 
         for col in ['services_','specializations']:
-            hosp[col]=hosp[col].split(',')
+            hosp[col]=[val.strip() for val in hosp[col].split(',')]
+
 
         hospName = hosp['hospital_private']
         print(hosp['ID'],hospName)

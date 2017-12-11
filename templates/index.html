@@ -1,74 +1,529 @@
 <!DOCTYPE html>
     <html>
     <head>
-            <meta charset="utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <title>Flask Google Maps Example</title>
-            {{"decoupled-map"|googlemap_js(37.4419, -122.1419, varname="decoupledmap", markers=[(37.4419, -122.1419)])}}
-            {{trdmap.js}}
+            <title>Be-informed</title>
     </head>
     <body>
-        <h1>Hospitals in vicinity</h1>
+    <form action="profile" method="post" enctype="multipart/form-data">
+        <h1>Enter the following details: </h1>
 
 
+        <h5 class="text-muted">City:</h5>
+
+          <select id="city" name="city" size="145" multiple>
+           <option>Port Blair</option>
+            <option>Hyderabad</option>
+            <option>Nampally</option>
+            <option>Secunderabad</option>
+            <option>Kadapa</option>
+            <option>Kurnool</option>
+            <option>Rajahmundry</option>
+            <option>Vijayawada</option>
+            <option>Visakhapatnam</option>
+            <option>Daporijo</option>
+            <option>Itanagar</option>
+            <option>Tawang</option>
+            <option>Barpeta</option>
+            <option>Dibrugarh</option>
+            <option>Ghungoor</option>
+            <option>Guwahati</option>
+            <option>Jorhat</option>
+            <option>Tezpur</option>
+            <option>Muzaffarpur</option>
+            <option>Darbhanga</option>
+            <option>Gaya</option>
+            <option>Patna</option>
+            <option>Chandigarh</option>
+            <option>Mohali</option>
+            <option>Bhilai</option>
+            <option>Bilaspur</option>
+            <option>Jagdalpur</option>
+            <option>Raipur</option>
+            <option>Silvassa</option>
+            <option>Daman</option>
+            <option>Delhi</option>
+            <option>New Delhi</option>
+            <option>Goa</option>
+            <option>Panjim</option>
+            <option>Ahmedabad</option>
+            <option>Anand</option>
+            <option>Bharuch</option>
+            <option>Bhavnagar</option>
+            <option>Godhra</option>
+            <option>Jamnagar</option>
+            <option>karamsad</option>
+            <option>Rajkot</option>
+            <option>Sanand</option>
+            <option>Surat</option>
+            <option>Surendranagar</option>
+            <option>Vadodara</option>
+            <option>Agroha</option>
+            <option>Ambala</option>
+            <option>Bhiwani</option>
+            <option>Faridabad</option>
+            <option>Gurgaon</option>
+            <option>Fatehabad</option>
+            <option>Hisar</option>
+            <option>Jhajjar</option>
+            <option>Jind</option>
+            <option>Karnal</option>
+            <option>Kurukshetra</option>
+            <option>Mahendergarh</option>
+            <option>Narnaul</option>
+            <option>Palwal</option>
+            <option>Panchkula</option>
+            <option>Panipat</option>
+            <option>Rewari</option>
+            <option>Rohtak</option>
+            <option>Sirsa</option>
+            <option>Sonipat</option>
+            <option>Yamunanagar</option>
+            <option>Shimla</option>
+            <option>Jammu</option>
+            <option>Srinagar</option>
+            <option>Hazaribagh</option>
+            <option>Jamshedpur</option>
+            <option>Ranchi</option>
+            <option>Bengaluru</option>
+            <option>Mangalore</option>
+            <option>Alappuzha</option>
+            <option>Cochin</option>
+            <option>Kannur</option>
+            <option>Karakonam</option>
+            <option>Kochi</option>
+            <option>Kolencherry</option>
+            <option>Kollam</option>
+            <option>Kottayam</option>
+            <option>Kozhikode</option>
+            <option>Modakkallur</option>
+            <option>Palakkad</option>
+            <option>Pathanamthitta</option>
+            <option>Perintalmanna</option>
+            <option>Thiruvalla</option>
+            <option>Thiruvananthapuram</option>
+            <option>Thrissur</option>
+            <option>Venjaramoodu</option>
+            <option>Kavaratti</option>
+            <option>Indore</option>
+            <option>Mumbai</option>
+            <option>Pune</option>
+            <option>Thane</option>
+            <option>Imphal</option>
+            <option>Manipur</option>
+            <option>Aizawl</option>
+            <option>Kohima</option>
+            <option>Behrampur</option>
+            <option>Bhubaneswar</option>
+            <option>Burla</option>
+            <option>Cuttack</option>
+            <option>Rourkela</option>
+            <option>Gorimedu</option>
+            <option>Kalapet</option>
+            <option>Kudupakkam</option>
+            <option>Madagadipet</option>
+            <option>Pangoor</option>
+            <option>Pillaiyarkuppam</option>
+            <option>Puducherry</option>
+            <option>Amritsar</option>
+            <option>Hoshiarpur</option>
+            <option>Jalandhar</option>
+            <option>Ludhiana</option>
+            <option>Patiala</option>
+            <option>Ropar</option>
+            <option>Zirakpur</option>
+            <option>Ajmer</option>
+            <option>Jaipur</option>
+            <option>Jodhpur</option>
+            <option>Gangtok</option>
+            <option>Chennai</option>
+            <option>Kanyakumari</option>
+            <option>Salem</option>
+            <option>Agartala</option>
+            <option>Agra</option>
+            <option>Ghaziabad</option>
+            <option>Greater Noida</option>
+            <option>Hathras</option>
+            <option>Kanpur</option>
+            <option>Lucknow</option>
+            <option>Meerut</option>
+            <option>Moradabad</option>
+            <option>Muzaffarnagar</option>
+            <option>Noida</option>
+            <option>Saharanpur</option>
+            <option>Varanasi</option>
+            <option>Dehradun</option>
+            <option>Haldwani</option>
+            <option>Rishikesh</option>
+            <option>Roorkee</option>
+            <option>Kolkata</option>
 
 
-        <!--<h2> 3rd map generated in view</h2>-->
-        <!--<h3> Example for multiple markers with infoboxes</h3>-->
-        <!--<h4>Click in markers to see it in action!</h4>-->
-        <!--<h4>Click in the YELLOW marker to see HTML rendered</h4>-->
-        {{trdmap.html}}
+            </select>
 
-        <code>
-            <pre>
-<!--
-                {% raw %}
+        <h5 class="text-muted">specilization:</h5>
 
-View:
-from flask_googlemaps import Map, icons
+          <select id="specializations" name="specializations" size="361" multiple>
+<option>ENT</option>
+<option>Gynaecology</option>
+<option>Medicine</option>
+<option>Pathology and Ophthalmology</option>
+<option>Pediatrics</option>
+<option>Surgery</option>
+<option>Anaesthesiology</option>
+<option>Bio-Chemistry</option>
+<option>Cardiac Yoga</option>
+<option>Cardiology</option>
+<option>CardiologyCardiothoracic Surgery</option>
+<option>Chest Physician</option>
+<option>Critical Care</option>
+<option>Dentistry and Maxillofacial Surgery</option>
+<option>Dermatology</option>
+<option>Diabetology</option>
+<option>Dietetics</option>
+<option>Emergency Medicine</option>
+<option>Endocrinology</option>
+<option>Endoscopy</option>
+<option>Gastroenterology</option>
+<option>Gastrointestinal Medicine</option>
+<option>General Medicine</option>
+<option>General Surgery</option>
+<option>Geriatrics</option>
+<option>Hepatology</option>
+<option>Internal Medicine</option>
+<option>Interventional Radiology</option>
+<option>Laboratory Medicine</option>
+<option>Laparoscopic Surgery</option>
+<option>Medical Oncology</option>
+<option>Medicine / Wellness</option>
+<option>Micro-Biology</option>
+<option>Nephrology</option>
+<option>Neuro Surgery</option>
+<option>Neurology</option>
+<option>Nuclear Medicine</option>
+<option>Obstetrics and Gynaecology</option>
+<option>Ophthalmology</option>
+<option>Orthopedics and Traumatology</option>
+<option>Otorhinolaryngology Pathology</option>
+<option>Pediatric</option>
+<option>Pediatric Surgery</option>
+<option>Pediatric and Neonatology</option>
+<option>Physiotherapy</option>
+<option>Plastic Surgery and Cosmetic Surgery</option>
+<option>Preventive</option>
+<option>Psychiatry</option>
+<option>Pulmonology</option>
+<option>Radio-Diagnosis</option>
+<option>Radiology</option>
+<option>Respiratory</option>
+<option>Rheumatology</option>
+<option>Sports Medicine Surgical Gastroenterology Surgical Oncology</option>
+<option>Urology Vascular Surgery</option>
+<option>haematology</option>
+<option>Cardiothoracic Surgery</option>
+<option>Cosmetic Surgery</option>
+<option>Cosmetology</option>
+<option>Micro Surgery</option>
+<option>Oncology</option>
+<option>Orthopedics</option>
+<option>Pediatric Cardiology</option>
+<option>Plastic Surgery</option>
+<option>Urology</option>
+<option>Laboratory Medicine.  Nephrology.  Neuro Surgery.  Neurology.  Oncology</option>
+<option>Accident and Emergency</option>
+<option>Bariatric Surgery</option>
+<option>Bone Marrow</option>
+<option>Cardiovascular Surgery</option>
+<option>Clinical Psychology</option>
+<option>Dentistry</option>
+<option>Hair Transplantation</option>
+<option>Interventional</option>
+<option>Interventional Cardiology</option>
+<option>Kidney Transplantation</option>
+<option>Liver Transplant</option>
+<option>Neuroradiology</option>
+Obstetrics and Gynaecology Oncology Ophthalmology Orthopedics Pain Management Pediatric Surgery Pediatric and Neonatology Plastic Surgery Psychiatry Pulmonology Radiation Oncology Radiology and Imageology Rheumatology Robotic Surgery Spine Surgery Surgical <option>astroenterology Surgical Oncology Transfusion Medicine Urology Vascular Surgery</option>
+<option>Transplant</option>
+<option>Genetics</option>
+Ophthalmology Orthopedics Pain Management Pathology Pediatric Surgery Pediatric Physiotherapy Plastic Surgery Preventive Medicine / <option>wellness Psychiatry Pulmonology Radiation Oncology Radiology Spine Surgery Surgical Gastroenterology Surgical Oncology Urology</option>
+<option>Cardiac Anesthesia</option>
+<option>Infectious Diseases</option>
+<option>Pathology</option>
+<option>Radiation Oncology</option>
+<option>Spine Surgery</option>
+<option>Surgical Oncology</option>
+<option>Fetal Medicine</option>
+<option>Psychology</option>
+<option>ENT and Head and Neck Surgery</option>
+<option>Maxillofacial Surgery</option>
+<option>Minimal Access Surgery</option>
+<option>Vascular Surgery</option>
+<option>Surgical Gastroenterology</option>
+<option>Transfusion Medicine</option>
+<option>Joint Replacement Surgery</option>
+<option>Orthopedic Surgery</option>
+<option>Sports Injuries</option>
+<option>Homeopathy</option>
+<option>Anesthesiology</option>
+<option>Orthodontics</option>
+<option>Pain Management</option>
+<option>Cardiothoracic</option>
+<option>Chest Physician Clinical</option>
+<option>Pharmacology</option>
+<option>Surgical Gastroenterology Surgical Oncology Urology Vascular Surgery</option>
+<option>Anesthesia</option>
+<option>CardiologyCardio Thoracic Surgery</option>
+<option>Clinical Pathology</option>
+<option>Critical Care and Pain Management</option>
+<option>Dialysis</option>
+<option>Dietetics and Nutrition</option>
+<option>Electrophysiology</option>
+<option>Emergency and Trauma</option>
+<option>Injury Clinic</option>
+<option>Neurosurgery</option>
+<option>Pediatrics Surgery</option>
+<option>Plastic and Cosmetic Surgery</option>
+<option>Radiology Rheumatology</option>
+<option>Shoulder and Sports</option>
+<option>General & Laparoscopic Surgery</option>
+<option>IVF & Infertility</option>
+<option>Obstetricsand Gynaecology</option>
+<option>Cardiac Rehab Yoga</option>
+<option>Ophthalmology Orthopedics and Traumatology</option>
+<option>Otolaryngology</option>
+<option>Neuro Surgery Neurology</option>
+<option>Rheumatology Surgical</option>
+<option>Cosmetic Dentistry</option>
+<option>NA</option>
+<option>(IVF)/Reproductive Medicine</option>
+<option>Biochemistry</option>
+<option>Blood Bank</option>
+<option>Critical Care Medicine</option>
+<option>Cytology Laboratory</option>
+<option>Dental Medicine</option>
+<option>In-Vitro Fertilization</option>
+<option>Laboratory</option>
+<option>Medical</option>
+<option>Medicine/TBRD</option>
+<option>Microbiology</option>
+<option>Minimally Invasive Surgery</option>
+<option>Orthopedic</option>
+<option>Pathology Laboratory</option>
+<option>Pediatrics Urology</option>
+<option>Radiology & Imaging</option>
+<option>Surgical</option>
+<option>haematology Oncology</option>
+<option>Alcohol and other substance deaddiction treatment</option>
+<option>Counseling for childhood and adolescent behavioural problems</option>
+<option>Marital counseling</option>
+<option>academic difficulties and relationship problems Counseling and treatment for suicide prevention</option>
+<option>Gastrointestinal Surgery</option>
+<option>Neurology  Obstetricsand Gynaecology</option>
+<option>Accident & Emergency</option>
+<option>Neuro Psychiatry</option>
+<option>Andrology</option>
+<option>Gastro Surgery</option>
+<option>Gastrology</option>
+<option>Obstetrics& Gynaecology</option>
+<option>Anaesthesia</option>
+<option>Dental</option>
+<option>Dietician</option>
+<option>Eye</option>
+<option>Gastro Intestinal Surgery</option>
+<option>Gastroentology & Hepatology</option>
+<option>General and Laproscopic SurgeryCardio Thoracic SurgeryOro-Maxillary Surgeon</option>
+<option>Gynaecology Gynaecology and Obstetrics</option>
+<option>Neuro-Surgery</option>
+<option>Paediatric Surgery</option>
+<option>Renal Transplant Surgery</option>
+<option>Trauma Center</option>
+<option>radiology</option>
+<option>EYE/ENT</option>
+<option>Surgery & Orthopaedic</option>
+<option>Acidity</option>
+<option>Infertility</option>
+<option>Liver DisoRoader</option>
+<option>Migraine</option>
+<option>Panchkarma</option>
+<option>Piles</option>
+<option>Sexual DisoRoaders</option>
+<option>Sinus</option>
+<option>Tonsillitis</option>
+<option>Ulcer</option>
+<option>White Patches</option>
+<option>EYE</option>
+<option>Skin and VD</option>
+<option>Gyneac Oncology</option>
+<option>Naturopathy</option>
+<option>Neuro Oncolo+I83gy Nuclear Medicine</option>
+<option>Orthopaedic Oncology</option>
+<option>Pediatric Oncology</option>
+<option>Pediatric haematology</option>
+<option>Surgical Oncology.</option>
+<option>and Oncology</option>
+<option>Dermatology (SKIN)</option>
+<option>Pediatric surgery</option>
+<option>Surgical Super specialty clinic include</option>
+<option>Anatomy</option>
+<option>Biomedical Engineering</option>
+<option>Biophysics</option>
+<option>Biostatistics</option>
+<option>Biotechnology</option>
+<option>Centre for Community Medicine</option>
+<option>College of Nursing</option>
+<option>Dermatology and Venereology</option>
+<option>Finance Division</option>
+<option>Forensic Medicine and Toxicology</option>
+<option>Gastroenterology and Human Nutrition</option>
+<option>Haematology</option>
+<option>Hospital Administration</option>
+<option>Metabolism and Diabetes</option>
+<option>Nuclear Magnetic Resonance Imaging</option>
+<option>Otorhinolaryngology</option>
+<option>Physical Medicine and Rehabilitation</option>
+<option>Physiology</option>
+<option>Radio Diagnosis</option>
+<option>Reproductive Biology</option>
+<option>Surgical Disciplines</option>
+<option>Transfusion Medicine (Blood Bank)</option>
+<option>Transplant Immunology and Immunogenetics</option>
+<option>Arthritis</option>
+<option>Laboratory Services</option>
+<option>Obstetrics and Gyaenocology</option>
+<option>Physiotherapy and Occupational Therapy</option>
+<option>Surgery.</option>
+<option>Ayurvedic</option>
+<option>Skin</option>
+<option>Arthroscopic Surgery</option>
+<option>Endoscopic Surgery</option>
+<option>GI Surgery</option>
+<option>General / Family practice</option>
+<option>Gynaecology and Obstetrics</option>
+<option>Microbiology and Pathology</option>
+<option>Minimal Invasive Surgery</option>
+<option>Orthopedic and Traumatology</option>
+<option>Pediatrics and Neonatology</option>
+<option>Plastic and Reconstructive Surgery</option>
+<option>E.N.T</option>
+<option>Gastro Enterology</option>
+<option>General surgery</option>
+<option>Radiology Ophthalmology</option>
+<option>ART</option>
+<option>Chest Clinic</option>
+<option>Family Planning</option>
+<option>Forensic Medicine</option>
+<option>GynaecologyPediatrics</option>
+<option>Malaria Clinic</option>
+<option>PPCT Introduction</option>
+<option>Psychiatric</option>
+<option>VCTC (AIDS CLINIC)</option>
+<option>Eye Care</option>
+<option>DermatologyENT</option>
+<option>Gastroenterology and Endoscopy</option>
+<option>General Medicie</option>
+<option>IVF</option>
+<option>IVF and Infertility</option>
+<option>Dental andDermatology(Skin)</option>
+<option>Ophthalmology (Eye)</option>
+<option>Orthopedic with Physiotherapy</option>
+<option>Unani</option>
+<option>Dental and Maxillofacial Surgery</option>
+<option>ENT and Cochlear Implant</option>
+<option>Endocrinology and Endocrine Surgery</option>
+<option>General and Minimal Access Surgery</option>
+<option>IVF and Infertility Treatment</option>
+<option>Pediatric Pediatric Surgery</option>
+<option>Physiotherapy and Rehabilitation</option>
+<option>Psychiatry Emergency and Acute Care Medicine</option>
+<option>Eye bank</option>
+<option>Child Care.</option>
+<option>Diabetic</option>
+<option>Pediatric Urology</option>
+<option>ARTHROSCOPY and Spinal Surgery</option>
+<option>Cardiology and Invasive</option>
+<option>Emergency and Critical Care</option>
+<option>Endocrinology and Metabolism</option>
+<option>Gastroenterology and Hepatology</option>
+<option>Joint Replacements</option>
+<option>Liver Transplantation</option>
+<option>Medicine And Physiotherapy</option>
+<option>Nephrology and Dialysis</option>
+<option>Neurology Neurosurgery</option>
+<option>Pulmonologist</option>
+<option>Rehabilitation</option>
+<option>Vascular and Peripheral</option>
+<option>haematology and Clinical Cytopathology</option>
+<option>Addictions</option>
+<option>Anxiety Disorders</option>
+<option>Child and Adolescent Mental Health Services</option>
+<option>Counselling</option>
+<option>Depression</option>
+<option>Eating Disorders</option>
+<option>Mood Disorders</option>
+<option>Sleep Disorders</option>
+<option>Stress Management</option>
+<option>Emergency</option>
+<option>Cancer Hospital</option>
+<option>Cancer</option>
+<option>Radiation oncology</option>
+<option>Homeophetic service</option>
+<option>Ent</option>
+<option>Low Vision Eye Bank</option>
+<option>Ayurvedic.</option>
+<option>PAC Clinic</option>
+<option>Cataract and IOL</option>
+<option>Comprehensive Eye Check-up</option>
+<option>Contact Lens</option>
+<option>Corneal Disorders / C3R Glaucoma</option>
+<option>Diabetic Retinopathy Macular Degeneration</option>
+<option>Inflammation</option>
+<option>LASIK / i-LASIK Implantable Contact Lens (ICL)</option>
+<option>Low Vision Aids</option>
+<option>Neuro-Ophthalmology</option>
+<option>Ocular Electrophysiology</option>
+<option>Orbit and Oculoplasty</option>
+<option>Pediatric Ophthalmology</option>
+<option>Retinal Detachment Uveitis and Ocular</option>
+<option>Squint and Orthoptics</option>
+<option>Foetal Medicine</option>
+<option>Neonatology</option>
+<option>Dietary</option>
+<option>Gastro</option>
+<option>Neuro surgery</option>
+<option>Family Welfare</option>
+<option>IYCF centre</option>
+<option>Cornea</option>
+<option>Glaucoma</option>
+<option>Medical Retina</option>
+<option>Oculoplasty</option>
+<option>Pediatric-Ophthalmology</option>
+<option>Squint</option>
+<option>Surgical Retina</option>
+<option>contact Lens</option>
+<option>ART Clinic</option>
+<option>Medical Department</option>
+<option>Dental Department</option>
+<option>Dermatology and STD</option>
+<option>Nursing</option>
+<option>Paediatric</option>
+<option>Cardiac Surgery</option>
+<option>Gastroenterology  Gastrointestinal Surgery</option>
+<option>Gynaecology  Homeopathy</option>
+<option>Joint Replacement</option>
+<option>Minimally Invasive</option>
+<option>Naturopathy  Neuro Surgery</option>
+<option>Obesity  Ophthalmology</option>
+<option>Orthopedic Oncology</option>
+<option>Pediatric Orthopedics</option>
+<option>Pediatrics  Physiotherapy</option>
+<option>Respiratory Medicine</option>
+<option>Speech Therapy</option>
+<option>Sports Medicine</option>
+<option>Critical Care Medicines</option>
+<option>Fibroscan</option>
+<option>GI Bleed Unit</option>
+<option>Liver cancer treatment</option>
+          </select>
 
-@app.route("/")
-def mapview():
-    trdmap = Map(
-        identifier="trdmap",
-        lat=37.4419,
-        lng=-122.1419,
-        markers=[
-            {
-                'icon': icons.alpha.B,
-                'lat':  37.4419,
-                'lng':  -122.1419,
-                'infobox': "Hello I am < b style='color:green;'>B< / b >!"
-            },
-            {
-                'icon': icons.dots.blue,
-                'lat': 37.4300,
-                'lng': -122.1400,
-                'infobox': "Hello I am < b style='color:blue;'>BLUE< / b >!"
-            },
-            {
-                'icon': icons.dots.yellow,
-                'lat': 37.4500,
-                'lng': -122.1350,
-                'infobox': (
-                    "Hello I am < b style='color:#ffcc00;'> YELLOW < / b >!"
-                    "< h2 >It is HTML title< / h2 >"
-                    "< img src=' //placehold.it/50' >"
-                    "< br >Images allowed!"
-                )
-            }
-        ]
-    )
-    return render_template('example.html', trdmap=trdmap)
-
-Template:
-in head:
-    {{trdmap.js}}
-in body:
-    {{trdmap.html}}
-
-{% endraw %}
--->
-
+    </form>
     </body>
 </html>

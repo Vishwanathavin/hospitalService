@@ -7,7 +7,7 @@ except pymongo.errors.ConnectionFailure as e:
     print("Could not connect to MongoDB: %s" % e)
 hospDatabase = conn['hospitalDB']
 
-val = hospDatabase.hospInfo.distinct('city')
+val = hospDatabase.hospInfo.distinct('specializations')
 print(val)
 # hospList = hospDatabase.hospInfo.find({"$and":[{"specializations":{"$in":["Gynaecology"]}},{"city":"Chennai"},{"services_":{"$in":["Ambulance"]}}]})
 #
